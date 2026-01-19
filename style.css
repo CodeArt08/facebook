@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "SFProDisplay-Regular", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center vertically */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Align vertically in the center */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Logo Section */
+.logo-section {
+    width: 58%;
+    padding-right: 32px;
+    margin-bottom: 20px;
+    /* Add some space at bottom for mobile collapse */
+}
+
+.fb-logo {
+    height: 106px;
+    /* Keep the height */
+    margin: 0;
+    /* Remove negative margin to fix overlap */
+    display: block;
+}
+
+.tagline {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
+    color: #1c1e21;
+}
+
+/* Login Card Section */
+.login-card-section {
+    width: 396px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.input-group {
+    margin-bottom: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 17px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    outline: none;
+    line-height: 16px;
+}
+
+input:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+    caret-color: #1877f2;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    line-height: 48px;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #166fe5;
+}
+
+.forgot-password {
+    display: block;
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    border-bottom: 1px solid #dadde1;
+    margin-bottom: 20px;
+}
+
+.create-account-btn {
+    background-color: #42b72a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0 16px;
+    line-height: 48px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: inline-block;
+}
+
+.create-account-btn:hover {
+    background-color: #36a420;
+}
+
+.create-page-text {
+    font-size: 14px;
+    color: #1c1e21;
+}
+
+.create-page-text a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1c1e21;
+}
+
+.create-page-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    body {
+        align-items: flex-start;
+        /* Allow scrolling on small screens */
+        padding: 0;
+        /* Remove body padding on mobile */
+        background-color: #fff;
+        /* Often white on mobile, or keep gray */
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        width: 100%;
+    }
+
+    .logo-section {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fb-logo {
+        height: 60px;
+        /* Smaller logo on mobile */
+        margin-bottom: 10px;
+    }
+
+    .tagline {
+        font-size: 18px;
+        /* Smaller text */
+        line-height: 24px;
+        width: auto;
+        max-width: 350px;
+    }
+
+    .login-card-section {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .card {
+        box-shadow: none;
+        /* Flatter look on mobile often */
+        border: none;
+        /* Or keep border */
+        background-color: transparent;
+        /* Or keep white */
+        padding: 0;
+    }
+
+    /* If we want to keep the card look on mobile but centered */
+    @media (min-width: 400px) and (max-width: 900px) {
+        .card {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .tagline {
+        display: none;
+        /* Facebook often hides tagline on very small screens or mobile app login */
+    }
+
+    .logo-section {
+        margin-bottom: 10px;
+    }
+
+    .fb-logo {
+        height: 50px;
+    }
+}

